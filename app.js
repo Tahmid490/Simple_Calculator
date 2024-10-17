@@ -26,13 +26,18 @@ if (num1Con || num2Con || num3Con) {
       break;
     case 4:
       optionName = "Division";
-      result = num1 / num2;
+      result = parseFloat(num1 / num2);
       break;
 
     default:
       break;
   }
-  document.write(
-    `<h1>num1: ${num1} and num2: ${num2} <br> option number is: ${option} <br> option name is: ${optionName} <br> result is: ${result} </h1>`
-  );
+  if (result == null) {
+    result = "No Result";
+    document.write(`<h1>result is: ${result} </h1>`);
+  } else {
+    document.write(
+      `<h1>num1: ${num1} and num2: ${num2} <br> option number is: ${option} <br> option name is: ${optionName} <br> result is: ${result} </h1>`
+    );
+  }
 }
